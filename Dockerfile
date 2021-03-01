@@ -1,15 +1,7 @@
-FROM ubuntu:20.04
+FROM rasa/rasa:latest
 
-ENTRYPOINT []
+ADD . /app
 
-ADD . /app/
+RUN cd /app && if ! test -d 'models'; then rasa train; fi
 
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip
-
-RUN python3 -m pip install --no-cache --upgrade pip
-RUN pip3 install --no-cache rasa
-
-RUN cd /app/ && rasa train
-
-CMD cd /app/ && rasa run --enable-api --cors "*" --debug -p $PORT
+ENTRYPOINT cd /app && rasa run --enable-api --cors "*" --debug -p $PORT
