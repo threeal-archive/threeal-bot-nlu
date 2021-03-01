@@ -5,7 +5,7 @@
 ## Project Setup
 
 - Follow [this guide](https://rasa.com/docs/rasa/installation) to install Rasa Open Source.
-  > As an alternative, you may deploy this project on the cloud as [a Docker](https://www.docker.com/) using [Heroku](https://www.heroku.com/home) with the configurations that have been provided.
+  > As an alternative, you may deploy this project as [a Docker](https://www.docker.com/) container locally or on the cloud using [Heroku](https://www.heroku.com/home) with the configurations that have been provided.
 
 ## Usage
 
